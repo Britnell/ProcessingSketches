@@ -1,9 +1,6 @@
 /**
- * Simple Read
- * 
- * Read data from the serial port and change the color of a rectangle
- * when a switch connected to a Wiring or Arduino board is pressed and released.
- * This example works with the Wiring / Arduino program that follows below.
+ *  Draw a line with mouse 
+      and it will create a line shape with width from it
  */
 
 PShape sh;
@@ -13,10 +10,17 @@ PShape dual;
 int shi = 0;
 PShape grow;
 
+boolean morph = false;
+PVector center;
+
+
 
 void setup() 
 {
+  frameRate(5);
+  
   size(800, 800);
+  center = new PVector(width/2, height/2);
   
   background(255);
   
@@ -36,6 +40,7 @@ void setup()
   // setup
 }
 
+
 void draw()
 {
   //
@@ -43,6 +48,12 @@ void draw()
   shape(sh);
   shape(dual);
   
+  if(morph){
+    int subj = int(random(1,dual.getVertexCount()));
+    PVector point = dual.getVertex(subj);
+    
+  }
+  // Eo draw
 }
 
 
@@ -146,8 +157,31 @@ void mouseReleased(){
   
   dual.endShape();
   
+  // now grow
+  //morph = true;
   
   //
 }
+
+
+// ******** STep all
+
+void shift_all(){
+      for(int v=0; v<dual.getVertexCount(); v++){
+        PVector next = dual.getVertex(v);
+        PVector dir = PVector.sub(next, center);
+          dir.normalize();
+          dir.mult(random(-3,9));
+          dir.rotate( random(-PI,PI)/2);
+        next.add(dir);
+        dual.setVertex(v,next);
+        // Eo for 
+      }
+      //
+      noStroke();  fill(255,80);
+        rect(0,0,width,height);
+      shape(sh);
+}
+
 
 // *

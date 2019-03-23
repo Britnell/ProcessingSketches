@@ -18,7 +18,7 @@ void draw() {
   PVector C = new PVector(width/2, height/2);
 
   // * dd
-  beginRecord(SVG, "lines_A.svg");
+  beginRecord(SVG, "lines_B.svg");
   
   //spiral();
   //double_spiral();

@@ -1,4 +1,8 @@
-
+/*
+ *   Calculate linear overlap for layers
+ *
+ */
+ 
 float HEIGHT = 30;//cm
 float HALFHEIGHT = HEIGHT/2;
 float cardboard = 0.22;//cm
@@ -38,7 +42,10 @@ void setup(){
         lastOuter = R_outer;
       }
       else {
-        R_inner = lastOuter -ringOverlap;
+         
+          // first half, going UP so outer is larger than last
+          R_inner = lastOuter -ringOverlap;  
+        
         lastInner = R_inner;
         lastOuter = R_outer;
       }

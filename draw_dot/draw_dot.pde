@@ -44,7 +44,7 @@ Dot d2 = new Dot(600,600,50);
 
 void setup()
 {
-  size(1200,800);
+  size(240,320);
   background(0);
   
   d1.Draw();

@@ -30,7 +30,7 @@ import processing.opengl.PGraphics2D;
   PGraphics2D pg_fluid;
   
   public void settings() {
-    size(800, 800, P2D);
+    size(100, 200, P2D);
   }
   
   public void setup() {

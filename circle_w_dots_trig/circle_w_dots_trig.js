@@ -1,6 +1,6 @@
 
-var r = 400;
-var d = 28;
+var r = 600;
+var d = 33;
 var c;
 var off;
 var grid, count;
@@ -12,7 +12,8 @@ function setup() {
   c = createVector(width/2, height/2);
   count = 0;
   off = createVector(d/2,d/2);
-  trig = d/3; //sin(PI/3)*d;
+  trig = sin(PI/3)*d; // equilat.  // d/3; // dense
+  //trig = d/3; // dense
   //grid = width/d;
   grid = height / trig;
    //off = createVector(0,0);
@@ -32,7 +33,7 @@ function draw() {
   grid = width/d;
   
   for(var x=0;x<grid;x++){
-    for(var y=0;y<grid*1.5;y++){
+    for(var y=0;y<grid*1.8;y++){
       let po;
       // trig is h between rows, d dist between LEDs. d/2 offset of every other row
       if(y%2==0){
@@ -61,7 +62,7 @@ function draw() {
   
   textSize(30);
   strokeWeight(1); stroke(0);  fill(0);
-  text(count.toString(),30, height-30);
+  text( count.toString()+" LEDs  /  "+r.toString()+" mm" ,30, height-30);
   
 }
 

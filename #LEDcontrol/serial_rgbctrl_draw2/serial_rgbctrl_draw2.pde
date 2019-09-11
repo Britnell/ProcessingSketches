@@ -19,7 +19,7 @@ int val;      // Data received from the serial port
 
 PVector canvasSize, canvasPos; 
 
-String serialport = "COM21";
+String serialport = "COM5";
 int PIXEL_X = 8;
 int PIXEL_Y = 8;
 float PIXEL_W, PIXEL_H;

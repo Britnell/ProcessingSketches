@@ -7,7 +7,7 @@
 import processing.serial.*;
 Serial ardPort;  // Create object from Serial class
 
-String serialport = "COM18";
+String serialport = "COM4";
 int NMPXL = 93;    // PIXELS to draw on
 
 int sendPeriod = 50;

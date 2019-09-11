@@ -6,7 +6,7 @@ var off;
 var grid, count;
 
 function setup() {
-  createCanvas(800,800);
+  createCanvas(800,650);
   frameRate(5);
   c = createVector(width/2, height/2);
   grid = width/d;
@@ -50,7 +50,7 @@ function draw() {
   
   textSize(30);
   strokeWeight(1); stroke(0);  fill(0);
-  text(count.toString(),30, height-30);
+  text( count.toString()+" LEDs  /  "+r.toString()+" mm" ,30, height-30);
   
 }
 

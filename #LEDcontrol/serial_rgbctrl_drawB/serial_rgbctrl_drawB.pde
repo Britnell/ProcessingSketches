@@ -63,7 +63,7 @@ void setup()
   print("Serial ports available: ");
     println( Serial.list() );
   //String portName = Serial.list()[0];
-  String portName = "COM2";
+  String portName = "COM5";
     print("opening serial : ");
     println( portName );
   ardPort = new Serial(this, portName, 115200);

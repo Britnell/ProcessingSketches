@@ -13,7 +13,9 @@ void setup(){
   // 2 - Screen Display
   size(400, 400);
   noLoop();
-  beginRecord(SVG, "test2.svg");
+  
+  //beginRecord(SVG, "test2.svg");
+  
   // Eo setup
 }
 
